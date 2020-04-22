@@ -1,39 +1,56 @@
-// Set dependencies
 const express = require("express");
+const mongoose = require('mongoose');
+const routes = require("./routes");
 
-//required dotenv to enable environmental variables
-require('dotenv').config()
+const path = require("path");
+const PORT = process.env.PORT || 3001;
 
-//Parse incoming req.body and user input
-const bodyParser = require('body-parser');
+//required dotenv to enable environmental variables such as MONGO_URI
+// require('dotenv').config({path:'.env'})
 
-// Sets the express app and port for Heroku
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-// Requires models for syncing
-const db = require("./models");
-
-
-// Sets up the Express app to handle data parsing
+// Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Grants access to the static directory and all files within, such as css and js
-app.use(express.static("public"));
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
 
+// set up connection to MongoDB/mlab
+const dbConnect = async () => {
 
-// Require api routes
-// require("./routes/apiRoutes.js")(app);
+    // try to connect to the database and log connection
+    try {
+      const conn = await mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/lowbar", {
+              useNewUrlParser: true,
+              useCreateIndex: true,
+              useUnifiedTopology: true
+          });
+          
+          console.log(`MongoDB Connected: ${conn.connection.host}`)
+  
+        } catch (err) {
+  
+        //if connection fails, log the error message in the terminal and shut down process
+        console.log(`Error: ${err.message}`);
+        process.exit(1);
+      }
+  }
+  
+  dbConnect();
 
+// API routes here
+app.use(routes);
 
-// Sync models, then start express app
-db.sequelize.sync().then(function() {
-    
-  app.listen(PORT, function() {
-
-    console.log("App listening on PORT " + PORT);
-  });
-
+// Send every other request to the React app
+// Define any API routes before this runs
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
-
+  
+app.listen(PORT, () => {
+    console.log(`🌎 ==> API server now on port ${PORT}!`);
+});
