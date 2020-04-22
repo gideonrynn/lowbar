@@ -1,0 +1,32 @@
+{
+  "name": "lowbar",
+  "version": "1.0.0",
+  "description": "Randomized chore app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gideonrynn/lowbar.git"
+  },
+  "keywords": [
+    "chores"
+  ],
+  "author": "sarah dillard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gideonrynn/lowbar/issues"
+  },
+  "homepage": "https://github.com/gideonrynn/lowbar#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.6"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.5.1"
+  }
+}
