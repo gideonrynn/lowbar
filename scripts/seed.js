@@ -81,6 +81,33 @@ let barSeed = [
         allCompleted: [],
         taskFrequency: "monthly"
     },
+    {
+        taskName: "Wipe down bookshelves",
+        category: "all",
+        details: "",
+        note: "",
+        lastComplete: "1/1/2020",
+        allCompleted: [],
+        taskFrequency: "monthly"
+    },
+    {
+        taskName: "Wipe down tabletops",
+        category: "all",
+        details: "",
+        note: "",
+        lastComplete: "9/1/2019",
+        allCompleted: [],
+        taskFrequency: "monthly"
+    },
+    {
+        taskName: "Disinfect humidifier",
+        category: "kitchen",
+        details: "",
+        note: "",
+        lastComplete: "4/1/2020",
+        allCompleted: [],
+        taskFrequency: "monthly"
+    },
 
 ];
 
