@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Task v-bind:tasks="tasks" />
+    <Tasks v-bind:tasks="tasks" />
   </div>
 </template>
 
 <script>
 // importing the component from the Todos
-import Task from './components/Task.vue'
+import Tasks from './components/Tasks.vue'
 
 export default {
   name: 'App',
   components: {
-    Task
+    Tasks
   },
   data() {
     return {
