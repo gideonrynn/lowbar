@@ -1,4 +1,6 @@
+
 <template>
+  <!-- the {{ msg }} is being passed down from the App template, HelloWorld -->
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h1>The rest is going to be the app</h1>
