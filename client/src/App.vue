@@ -21,11 +21,10 @@ export default {
   },
   created() {
     axios.get('http://localhost:3001/api/tasks')
-      // .then(res => this.tasks = res.data)
       .then(res => {
-        this.tasks = [res.data[Math.floor(Math.random() * res.data.length)]];
         console.log(res.data)
         console.log(res.data[Math.floor(Math.random() * res.data.length)])
+        this.tasks = [res.data[Math.floor(Math.random() * res.data.length)]];
       })
       .catch(err => console.log(err))
   }
@@ -44,6 +43,6 @@ export default {
   
 }
 body {
-  background-image: url('assets/doodles.png')
+  background-image: url('assets/giftly.png')
 }
 </style>

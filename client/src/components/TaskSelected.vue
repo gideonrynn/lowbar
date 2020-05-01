@@ -1,10 +1,9 @@
 <template>
-    <div>
-        
-        {{task.taskName}} <br>
-        <b-button variant="success" v-on:click="completeTask">Complete</b-button>
-        <b-button variant="info" v-on:click="skipTask">Skip</b-button><br>
-        Last Completed on: {{task.lastComplete}}
+    <div class="task-selected">
+        <p class="task-name">{{task.taskName}}</p>
+        <b-button size="lg" style="margin: 5px" variant="success" v-on:click="completeTask">Complete</b-button>
+        <b-button size="lg" style="margin: 5px" variant="info" v-on:click="skipTask">Skip</b-button><br>
+        <p class="last-completed">Last Completed on: {{task.lastComplete}}</p>
     </div>
 
 </template>
@@ -32,8 +31,17 @@ export default {
 </script>
 
 <style scoped>
-body {
-    background: lightskyblue;
+
+.last-completed {
+    font-size: small
+}
+
+.task-name {
+    font-size: 70px;
+}
+
+.variant {
+    margin: 10px;
 }
 
 </style>
