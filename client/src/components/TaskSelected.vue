@@ -10,15 +10,17 @@
 </template>
 
 <script>
+import moment from 'moment'
 
 export default {
+
     name: "TaskSelected",
     props: ["task"],
     methods: {
         completeTask() {
-            console.log("this was clicked");
+            console.log("this was clicked on " + moment().format('MM/DD/YYYY'));
             // update completed date
-            this.task.lastComplete = new Date();
+            this.task.lastComplete = moment().format('MM/DD/YYYY')
 
             // show new task
         },
