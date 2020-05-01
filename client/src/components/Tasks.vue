@@ -1,7 +1,7 @@
 <template>
 
     <div class="task-section" :style="taskStyle" id="body">
-        <h4><em>Your mission, should you <br>choose to accept it:</em></h4>
+        <p class="mission"> <em>Your mission, should you <br>choose to accept it:</em></p>
 
         <div v-bind:key="task.id" v-for="task in tasks">
             <!-- embed the selected task here -->
@@ -25,10 +25,10 @@ export default {
         return {
             taskStyle: {
                 backgroundColor: "#FFFFFF",
-                width: "500px",
-                height: "330px",
+                width: "600px",
+                height: "380px",
                 margin: "auto",
-                padding: "40px"
+                padding: "25px"
             }
         }
     },
@@ -37,5 +37,10 @@ export default {
 </script>
 
 <style scoped>
+
+.mission {
+    font-size: 20px;
+    padding-bottom: 10px
+}
 
 </style>

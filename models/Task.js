@@ -17,8 +17,8 @@ const taskSchema = new Schema(
     note: {
         type: String
     },
-    lastCompleted: {
-        type: Date
+    lastComplete: {
+        type: String
     },
     allCompleted: {
         type: Date

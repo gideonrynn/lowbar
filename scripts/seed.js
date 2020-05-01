@@ -46,7 +46,7 @@ let taskSeed = [
         taskFrequency: "monthly"
     },
     {
-        taskName: "Vaccuum/sweep room",
+        taskName: "Vacuum/sweep room",
         category: "bedroom",
         details: "",
         note: "",
