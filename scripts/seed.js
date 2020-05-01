@@ -8,7 +8,7 @@ mongoose.connect("mongodb://localhost/lowbar", {
   useUnifiedTopology: true
 });
 
-let barSeed = [
+let taskSeed = [
     {
         taskName: "Clean fish tanks",
         category: "",
@@ -113,8 +113,8 @@ let barSeed = [
 
 
 
-db.Bar.deleteMany({})
-.then(() => db.Bar.collection.insertMany(barSeed))
+db.Task.deleteMany({})
+.then(() => db.Task.collection.insertMany(taskSeed))
 .then(data => {
   console.log(data.result.n + " records inserted!");
   process.exit(0);

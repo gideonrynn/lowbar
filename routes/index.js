@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const barRoute = require("./barRoutes");
+const taskRoutes = require("./taskRoutes");
 
-router.use("/api", barRoute);
+router.use("/api", taskRoutes);
 
 module.exports = router;

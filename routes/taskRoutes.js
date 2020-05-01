@@ -2,10 +2,10 @@ const db = require("../models");
 const router = require("express").Router();
 
 // returns all plant entries in the db
-router.get('/bars', (req, res) => {
+router.get('/tasks', (req, res) => {
     
-    db.Bar.find()
-      .then(bars => res.json(bars))
+    db.Task.find()
+      .then(tasks => res.json(tasks))
 
 });
 

@@ -1,4 +1,4 @@
 module.exports = {
-    Bar: require('./bar'),
+    Task: require('./Task'),
   };
   

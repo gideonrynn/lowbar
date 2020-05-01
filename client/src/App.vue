@@ -5,8 +5,9 @@
 </template>
 
 <script>
-// importing the component from the Todos
+// importing the component from the Tasks
 import Tasks from './components/Tasks.vue'
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -15,40 +16,13 @@ export default {
   },
   data() {
     return {
-      tasks: [
-      {
-        taskName: "Clean fish tanks",
-        category: "",
-        details: "",
-        note: "Need to order more cleaner",
-        lastComplete: "4/21/2020",
-        allCompleted: ["4/1/2020", "3/15/2020", "2/15/2020"],
-        taskFrequency: "weekly",
-        id: 1
-    },
-    {
-        taskName: "Clean shower",
-        category: "bathroom",
-        details: "",
-        note: "need more spray",
-        lastComplete: "4/1/2020",
-        allCompleted: ["4/1/2020", "3/15/2020", "2/15/2020"],
-        taskFrequency: "monthly",
-        id: 2
-    },
-    {
-        taskName: "Clean sink",
-        category: "bathroom",
-        details: "",
-        note: "need more spray",
-        lastComplete: "4/1/2020",
-        allCompleted: ["4/1/2020", "3/15/2020", "2/15/2020"],
-        taskFrequency: "monthly",
-        id: 3
-    },
-
-      ]
+      tasks: []
     }
+  },
+  created() {
+    axios.get('http://localhost:3001/api/tasks')
+      .then(res => this.tasks = res.data)
+      .catch(err => console.log(err))
   }
 
 }

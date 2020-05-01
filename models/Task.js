@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const barSchema = new Schema(
+const taskSchema = new Schema(
   {
     taskName: {
         type: String,
@@ -31,6 +31,6 @@ const barSchema = new Schema(
 );
 
 
-const Bar = mongoose.model("Bar", barSchema);
+const Task = mongoose.model("Task", taskSchema);
 
-module.exports = Bar;
+module.exports = Task;
