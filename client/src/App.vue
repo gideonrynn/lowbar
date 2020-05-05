@@ -1,17 +1,19 @@
 <template>
   <div id="app">
+    <Nav />
     <Tasks v-bind:tasks="tasks" />
   </div>
 </template>
 
 <script>
-// importing the component from the Tasks
+import Nav from './components/layout/Nav'
 import Tasks from './components/Tasks.vue'
 import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
+    Nav,
     Tasks
   },
   data() {

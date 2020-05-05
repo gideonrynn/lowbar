@@ -18,16 +18,24 @@ export default {
     props: ["task"],
     methods: {
         completeTask(id) {
+
+
             console.log("this was clicked on " + moment().format('MM/DD/YYYY'));
-            // update completed date
+            console.log(id);
+
+            //update completed date on page
             this.task.lastComplete = moment().format('MM/DD/YYYY')
-            console.log(id)
+            
+            // update completed date
             const todaysDate = {
                 lastComplete: moment().format('MM/DD/YYYY')
             } 
 
             axios.put("http://localhost:3001/api/tasks/" + id, todaysDate)
-                .then(res => console.log(res))
+                .then(res => {
+                    console.log(res)
+                    window.location.reload()
+                    })
                 .catch(err => console.log(err))
 
             // show new task
