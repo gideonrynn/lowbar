@@ -8,7 +8,9 @@
 <script>
 import Nav from './components/layout/Nav'
 import Tasks from './components/Tasks.vue'
+import moment from 'moment'
 import axios from 'axios'
+
 
 export default {
   name: 'App',
@@ -24,9 +26,24 @@ export default {
   created() {
     axios.get('http://localhost:3001/api/tasks')
       .then(res => {
-        console.log(res.data)
-        console.log(res.data[Math.floor(Math.random() * res.data.length)])
-        this.tasks = [res.data[Math.floor(Math.random() * res.data.length)]];
+
+        let randomAll = res.data;
+        console.log(randomAll);
+
+        // let randomTaskFromAll = [res.data[Math.floor(Math.random() * res.data.length)]];
+        // console.log(randomTaskFromAll);
+        
+        let todaysDate = moment().format('MM/DD/YYYY')
+
+        let filteredTasks = randomAll.filter(randomAll => { 
+          return randomAll.lastComplete > todaysDate || randomAll.lastComplete == ""
+          });
+
+        console.log(filteredTasks);
+        
+        let randomTask = [filteredTasks[Math.floor(Math.random() * filteredTasks.length)]]
+
+        this.tasks = randomTask;
       })
       .catch(err => console.log(err))
   }

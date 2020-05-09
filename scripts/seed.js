@@ -13,8 +13,8 @@ let taskSeed = [
         taskName: "Clean fish tanks",
         category: "",
         details: "",
-        note: "Need to order more cleaner",
-        lastComplete: "4/21/2020",
+        note: "Pick a few tasks, Need to order more cleaner",
+        lastComplete: "04/21/2020",
         allCompleted: ["4/1/2020", "3/15/2020", "2/15/2020"],
         taskFrequency: "weekly"
     },
@@ -23,7 +23,7 @@ let taskSeed = [
         category: "bathroom",
         details: "",
         note: "need more spray",
-        lastComplete: "4/1/2020",
+        lastComplete: "04/1/2020",
         allCompleted: ["4/1/2020", "3/15/2020", "2/15/2020"],
         taskFrequency: "monthly"
     },
@@ -32,16 +32,16 @@ let taskSeed = [
         category: "bathroom",
         details: "",
         note: "need more spray",
-        lastComplete: "4/1/2020",
+        lastComplete: "04/1/2020",
         allCompleted: ["4/1/2020", "3/15/2020", "2/15/2020"],
         taskFrequency: "monthly"
     },
     {
-        taskName: "Clean toilet",
+        taskName: "Scrub toilet",
         category: "bathroom",
         details: "",
         note: "Drain cleaner",
-        lastComplete: "2/10/2020",
+        lastComplete: "02/10/2020",
         allCompleted: ["3/15/2020", "3/1/2020", "2/1/2020", "11/12/2019"],
         taskFrequency: "monthly"
     },
@@ -51,7 +51,7 @@ let taskSeed = [
         details: "",
         note: "",
         lastComplete: "",
-        allCompleted: ["3/20/2020", "2/8/2020", "12/5/2019"],
+        allCompleted: ["03/20/2020", "2/8/2020", "12/5/2019"],
         taskFrequency: "weekly"
     },
     {
@@ -59,7 +59,7 @@ let taskSeed = [
         category: "bedroom",
         details: "",
         note: "order detergent",
-        lastComplete: "4/21/2020",
+        lastComplete: "04/21/2020",
         allCompleted: ["4/16/2020", "4/10/2020", "4/1/2020"],
         taskFrequency: "weekly"
     },
@@ -68,7 +68,7 @@ let taskSeed = [
         category: "living room",
         details: "",
         note: "",
-        lastComplete: "4/21/2020",
+        lastComplete: "04/21/2020",
         allCompleted: ["4/16/2020", "4/10/2020", "4/1/2020"],
         taskFrequency: "weekly"
     },
@@ -77,7 +77,7 @@ let taskSeed = [
         category: "kitchen",
         details: "",
         note: "",
-        lastComplete: "4/1/2020",
+        lastComplete: "04/01/2020",
         allCompleted: [],
         taskFrequency: "monthly"
     },
@@ -86,7 +86,7 @@ let taskSeed = [
         category: "all",
         details: "",
         note: "",
-        lastComplete: "1/1/2020",
+        lastComplete: "01/01/2020",
         allCompleted: [],
         taskFrequency: "monthly"
     },
@@ -95,7 +95,7 @@ let taskSeed = [
         category: "all",
         details: "",
         note: "",
-        lastComplete: "9/1/2019",
+        lastComplete: "09/01/2019",
         allCompleted: [],
         taskFrequency: "monthly"
     },
@@ -104,10 +104,65 @@ let taskSeed = [
         category: "kitchen",
         details: "",
         note: "",
-        lastComplete: "4/1/2020",
+        lastComplete: "04/01/2020",
         allCompleted: [],
         taskFrequency: "monthly"
     },
+    {
+        taskName: "Clean light switches",
+        category: "all",
+        details: "",
+        note: "",
+        lastComplete: "04/01/2020",
+        allCompleted: [],
+        taskFrequency: "monthly"
+    },
+    {
+        taskName: "Swiffer floor",
+        category: "all",
+        details: "",
+        note: "",
+        lastComplete: "04/29/2020",
+        allCompleted: [],
+        taskFrequency: "monthly"
+    },
+    {
+        taskName: "Wash and store dishes",
+        category: "kitchen",
+        details: "",
+        note: "",
+        lastComplete: "",
+        allCompleted: [],
+        taskFrequency: "daily"
+    },
+    {
+        taskName: "Make bed",
+        category: "bedroom",
+        details: "",
+        note: "",
+        lastComplete: "",
+        allCompleted: [],
+        taskFrequency: "monthly"
+    },
+    {
+        taskName: "Put away clothes",
+        category: "all",
+        details: "",
+        note: "",
+        lastComplete: "",
+        allCompleted: [],
+        taskFrequency: "weekly"
+    },
+    {
+        taskName: "Clear out fridge",
+        category: "kitchen",
+        details: "",
+        note: "",
+        lastComplete: "04/18/2020",
+        allCompleted: [],
+        taskFrequency: "biweekly"
+    },
+
 
 ];
 
