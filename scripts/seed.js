@@ -162,7 +162,15 @@ let taskSeed = [
         allCompleted: [],
         taskFrequency: "biweekly"
     },
-
+    {
+        taskName: "Clean fan(s)",
+        category: "all",
+        details: "",
+        note: "",
+        lastComplete: "04/18/2020",
+        allCompleted: [],
+        taskFrequency: "biweekly"
+    },
 
 ];
 

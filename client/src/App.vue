@@ -36,7 +36,7 @@ export default {
         let todaysDate = moment().format('MM/DD/YYYY')
 
         let filteredTasks = randomAll.filter(randomAll => { 
-          return randomAll.lastComplete > todaysDate || randomAll.lastComplete == ""
+          return randomAll.lastComplete < todaysDate || randomAll.lastComplete == ""
           });
 
         console.log(filteredTasks);
