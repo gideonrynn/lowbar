@@ -29,4 +29,6 @@
           run: git config user.name "<username>" && git config user.email "<email>"
 
         - name: Deploy
-          run: npm run deploy
+          run: |
+            cd client
+            npm run deploy
