@@ -1,8 +1,8 @@
-  name: Deploy to Github Pages
+  name: Deploy GHP-Production to Github Pages
   on:
     push:
       branches:
-        - development
+        - gh-pages-production
 
   jobs:
     gh-pages-deploy:
