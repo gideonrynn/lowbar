@@ -31,7 +31,8 @@ export default {
                 lastComplete: moment().format('MM/DD/YYYY')
             } 
 
-            axios.put("http://localhost:3001/api/tasks/" + id, todaysDate)
+            // axios.put("http://localhost:3001/api/tasks/" + id, todaysDate)
+            axios.put("tasks.json" + id, todaysDate)
                 .then(res => {
                     console.log(res)
                     window.location.reload()
@@ -42,7 +43,7 @@ export default {
         },
         skipTask() {
             console.log("skip to another task");
-            // window.location.reload()
+            window.location.reload()
         }
     }
 }
