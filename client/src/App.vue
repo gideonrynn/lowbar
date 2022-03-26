@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Nav />
+    <!-- <Nav /> -->
     <Tasks v-bind:tasks="tasks" />
   </div>
 </template>
 
 <script>
-import Nav from './components/layout/Nav'
+// import Nav from './components/layout/Nav'
 import Tasks from './components/Tasks.vue'
 import moment from 'moment'
 import axios from 'axios'
@@ -15,7 +15,7 @@ import axios from 'axios'
 export default {
   name: 'App',
   components: {
-    Nav,
+    // Nav,
     Tasks
   },
   data() {
@@ -28,21 +28,28 @@ export default {
       .then(res => {
 
         let randomAll = res.data;
-        console.log(randomAll);
+        console.log("All random tasks: ", randomAll);
 
         // let randomTaskFromAll = [res.data[Math.floor(Math.random() * res.data.length)]];
         // console.log(randomTaskFromAll);
         
-        let todaysDate = moment().format('MM/DD/YYYY')
+        let todaysDate = moment().format('MM/DD/YYYY');
+        console.log("Today: ", todaysDate);
 
         let filteredTasks = randomAll.filter(randomAll => { 
-          return randomAll.lastComplete < todaysDate || randomAll.lastComplete == ""
+          return randomAll.lastComplete <= todaysDate || randomAll.lastComplete === ""
           });
+          
+        console.log("Tasks that have a lastComplete date earlier than today: ", filteredTasks);
 
-        console.log(filteredTasks);
+        let nonFilteredTasks = randomAll.filter(randomAll => { 
+          return randomAll.lastComplete >= todaysDate
+          });
+  
+        console.log("Tasks that have a lastComplete date more recent than today: ", nonFilteredTasks);
         
-        let randomTask = [filteredTasks[Math.floor(Math.random() * filteredTasks.length)]]
-
+        let randomTask = [randomAll[Math.floor(Math.random() * randomAll.length)]]
+        console.log("Selected random task: ", randomTask);
         this.tasks = randomTask;
       })
       .catch(err => console.log(err))

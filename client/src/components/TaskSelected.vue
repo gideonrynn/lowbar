@@ -42,7 +42,7 @@ export default {
         },
         skipTask() {
             console.log("skip to another task");
-            window.location.reload()
+            // window.location.reload()
         }
     }
 }
@@ -57,7 +57,7 @@ export default {
 .task-name {
     font-size: 70px;
     line-height: 72px;
-    padding-bottom: 18px;
+    padding: 18px;
 }
 
 
