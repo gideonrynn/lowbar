@@ -1,4 +1,4 @@
-Name: Test site build
+name: Test site build
 
 on:
   workflow_dispatch:
@@ -19,6 +19,8 @@ jobs:
     
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          ref: gh-pages-production
     
       # Configures the node version used on GitHub-hosted runners
       - name: Set up Node JS
@@ -29,5 +31,6 @@ jobs:
    
       - name: Install NPM and Test Build
         run: |
+          cd client
           npm install
           npm run build
