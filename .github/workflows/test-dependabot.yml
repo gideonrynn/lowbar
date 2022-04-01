@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: ${{ github.event.label.name != 'dependencies' }}
+    if: ${{ github.event.label.name == 'dependencies' }}
     runs-on: ubuntu-latest
     
     # identify array of node versions to run
