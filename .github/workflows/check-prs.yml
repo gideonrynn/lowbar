@@ -52,7 +52,7 @@ jobs:
               body = pull['body']
               title = pull['user']['login']
               reviewers = pull['requested_reviewers']
-              other = pull['head'['user']
+              other = pull['head']['user']
             };
             console.log('See pull details: ', pulls);
             console.log('Body: ' + body);
