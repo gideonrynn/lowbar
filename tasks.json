@@ -1,0 +1,211 @@
+[
+{
+    "_id" : "620c5389e4ce352d4831514c",
+    "taskName" : "Clean fish tanks",
+    "category" : "",
+    "details" : "",
+    "note" : "Pick a few tasks, Need to order more cleaner",
+    "lastComplete" : "04/21/2020",
+    "allCompleted" : [ 
+        "4/1/2020", 
+        "3/15/2020", 
+        "2/15/2020"
+    ],
+    "taskFrequency" : "weekly"
+},
+{
+    "_id" : "620c5389e4ce352d4831514d",
+    "taskName" : "Clean shower",
+    "category" : "bathroom",
+    "details" : "",
+    "note" : "need more spray",
+    "lastComplete" : "04/1/2020",
+    "allCompleted" : [ 
+        "4/1/2020", 
+        "3/15/2020", 
+        "2/15/2020"
+    ],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d4831514e",
+    "taskName" : "Clean sink",
+    "category" : "bathroom",
+    "details" : "",
+    "note" : "need more spray",
+    "lastComplete" : "04/1/2020",
+    "allCompleted" : [ 
+        "4/1/2020", 
+        "3/15/2020", 
+        "2/15/2020"
+    ],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d4831514f",
+    "taskName" : "Scrub toilet",
+    "category" : "bathroom",
+    "details" : "",
+    "note" : "Drain cleaner",
+    "lastComplete" : "02/17/2022",
+    "allCompleted" : [ 
+        "3/15/2020", 
+        "3/1/2020", 
+        "2/1/2020", 
+        "11/12/2019"
+    ],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315150",
+    "taskName" : "Vacuum/sweep room",
+    "category" : "bedroom",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "",
+    "allCompleted" : [ 
+        "03/20/2020", 
+        "2/8/2020", 
+        "12/5/2019"
+    ],
+    "taskFrequency" : "weekly"
+},
+{
+    "_id" : "620c5389e4ce352d48315151",
+    "taskName" : "Laundry",
+    "category" : "bedroom",
+    "details" : "",
+    "note" : "order detergent",
+    "lastComplete" : "04/21/2020",
+    "allCompleted" : [ 
+        "4/16/2020", 
+        "4/10/2020", 
+        "4/1/2020"
+    ],
+    "taskFrequency" : "weekly"
+},
+{
+    "_id" : "620c5389e4ce352d48315152",
+    "taskName" : "Vacuum",
+    "category" : "living room",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "04/21/2020",
+    "allCompleted" : [ 
+        "4/16/2020", 
+        "4/10/2020", 
+        "4/1/2020"
+    ],
+    "taskFrequency" : "weekly"
+},
+{
+    "_id" : "620c5389e4ce352d48315153",
+    "taskName" : "Clean oven",
+    "category" : "kitchen",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "04/01/2020",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315154",
+    "taskName" : "Wipe down bookshelves",
+    "category" : "all",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "01/01/2020",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315155",
+    "taskName" : "Wipe down tabletops",
+    "category" : "all",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "09/01/2019",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315156",
+    "taskName" : "Disinfect humidifier",
+    "category" : "kitchen",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "04/01/2020",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315157",
+    "taskName" : "Clean light switches",
+    "category" : "all",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "02/17/2022",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315158",
+    "taskName" : "Swiffer floor",
+    "category" : "all",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "04/29/2020",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d48315159",
+    "taskName" : "Wash and store dishes",
+    "category" : "kitchen",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "",
+    "allCompleted" : [],
+    "taskFrequency" : "daily"
+},
+{
+    "_id" : "620c5389e4ce352d4831515a",
+    "taskName" : "Make bed",
+    "category" : "bedroom",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "",
+    "allCompleted" : [],
+    "taskFrequency" : "monthly"
+},
+{
+    "_id" : "620c5389e4ce352d4831515b",
+    "taskName" : "Put away clothes",
+    "category" : "all",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "",
+    "allCompleted" : [],
+    "taskFrequency" : "weekly"
+},
+{
+    "_id" : "620c5389e4ce352d4831515c",
+    "taskName" : "Clear out fridge",
+    "category" : "kitchen",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "04/18/2020",
+    "allCompleted" : [],
+    "taskFrequency" : "biweekly"
+},
+{
+    "_id" : "620c5389e4ce352d4831515d",
+    "taskName" : "Clean fan(s",
+    "category" : "all",
+    "details" : "",
+    "note" : "",
+    "lastComplete" : "04/18/2020",
+    "allCompleted" : [],
+    "taskFrequency" : "biweekly"
+}
+]
