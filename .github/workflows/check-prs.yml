@@ -44,18 +44,21 @@ jobs:
               repo: context.repo.repo,
               pull_number: ${{ github.event.number }}
             });
-            body = ""
-            title = ""
-            reviewers = ""
-            other = ""
+            body = ''
+            title = ''
+            login = ''
+            reviewers = ''
+            other = ''
             for (const pull of pulls) {
               body = pull['body']
-              title = pull['user']['login']
+              login = pull['user']['login']
+              title = pull['title']
               reviewers = pull['requested_reviewers']
               other = pull['head']['user']
             };
             console.log('See pull details: ', pulls);
             console.log('Body: ' + body);
+            console.log('Login: ' + login);
             console.log('Title: ' + title);
             console.log('Requested reviewers: ' + reviewers);
             console.log('Other: ', other);
