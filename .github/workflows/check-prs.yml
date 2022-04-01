@@ -44,5 +44,7 @@ jobs:
               pull_number: ${{ github.event.number }}
             });
             console.log('See pull details: ', pulls);
-            console.log(pulls[body]);
+            console.log(pulls['body']);
+            console.log(pulls.url);
+            console.log(pulls.title);
             
