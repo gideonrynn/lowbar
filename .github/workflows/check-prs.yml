@@ -47,13 +47,16 @@ jobs:
             body = ""
             title = ""
             reviewers = ""
+            other = ""
             for (const pull of pulls) {
               body = pull['body']
               title = pull['user']['login']
               reviewers = pull['requested_reviewers']
+              other = pull['head'['user']
             };
             console.log('See pull details: ', pulls);
             console.log('Body: ' + body);
             console.log('Title: ' + title);
             console.log('Requested reviewers: ' + reviewers);
+            console.log('Other: ', other);
             
