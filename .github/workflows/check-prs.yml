@@ -36,6 +36,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           # hold: 'GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers'
+          # https://stackoverflow.com/questions/11922383/how-can-i-access-and-process-nested-objects-arrays-or-json
           script: |
             console.log(${{ github.event.number }});
             const pulls = await github.paginate('GET /repos/:owner/:repo/pulls/:pull_number', {
@@ -43,8 +44,13 @@ jobs:
               repo: context.repo.repo,
               pull_number: ${{ github.event.number }}
             });
+            body = ""
+            title = ""
+            for (const pull of pulls) {
+              body = pull['body']
+            };
             console.log('See pull details: ', pulls);
-            console.log(pulls['body']);
+            console.log(body);
             console.log(pulls.url);
             console.log(pulls.title);
             
