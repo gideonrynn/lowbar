@@ -15,13 +15,15 @@ on:
         description: 'Branch prefix to find combinable PRs based on'
         required: true
         default: 'dependabot'
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
   pull_request:
-    types: [opened]
+    types: [opened, labeled]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   check-prs:
     runs-on: ubuntu-latest
+    if: ${{ github.event.label.name != 'comments' }}
     # sequence of tasks that will be executed as part of the job
     steps:
       #https://docs.github.com/en/rest/reference/pulls#reviews
@@ -33,9 +35,10 @@ jobs:
         id: fetch-reviewer-names
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
+          # hold: 'GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers'
           script: |
             console.log(${{ github.event.number }});
-            const pulls = await github.paginate('GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers', {
+            const pulls = await github.paginate('GET /repos/:owner/:repo/pulls/:pull_number', {
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: ${{ github.event.number }}
