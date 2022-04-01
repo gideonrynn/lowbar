@@ -35,9 +35,10 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             console.log(${{ github.event.number }});
-            const pulls = await github.paginate('GET /repos/:owner/:repo/pulls/${{ github.event.number }}/requested_reviewers', {
+            const pulls = await github.paginate('GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers', {
               owner: context.repo.owner,
-              repo: context.repo.repo
+              repo: context.repo.repo,
+              pull_number: ${{ github.event.number }}
             });
             console.log(pulls);
             
