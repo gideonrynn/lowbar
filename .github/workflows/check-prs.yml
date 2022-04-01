@@ -43,5 +43,6 @@ jobs:
               repo: context.repo.repo,
               pull_number: ${{ github.event.number }}
             });
-            console.log(pulls);
+            console.log('See pull details: ', pulls);
+            console.log(pulls[body]);
             
