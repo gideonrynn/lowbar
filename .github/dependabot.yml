@@ -13,7 +13,7 @@ updates:
       - "dependencies"
       - "npm"
       - "backend"
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 10
 
   - package-ecosystem: "npm"
     directory: "/client"
