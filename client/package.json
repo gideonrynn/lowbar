@@ -15,7 +15,7 @@
     "bootstrap-vue": "^2.13.0",
     "core-js": "^3.6.4",
     "moment": "^2.24.0",
-    "vue": "^2.6.11"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.3.0",
