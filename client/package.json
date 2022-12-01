@@ -10,7 +10,7 @@
     "deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^1.2.0",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.13.0",
     "core-js": "^3.6.4",
